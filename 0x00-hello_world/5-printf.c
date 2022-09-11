@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /** 
  * main - entry point
  *
- * return 0: if entered correctly, non-zero otherwise
+ * return:0 if exited correctly, non-zero otherwise
  */
 int main(void)
 {
