@@ -1,11 +1,13 @@
 #include <stdio.h>
+
 /**
- * main - entry point
+ * main - print the string in the put function
  *
- * Return: Always 0 (success)
+ * Description: using the main function, this program  prints "With proper gramm   ar, but the outcome is a piece of art
+ * Return: Always 0 (Success)
  */
 int main(void)
 { 
- printf("%s\n, "with proper grammar, but the outcome is a piece of art,");
- return (0);0
+    printf("with proper grammar, but the outcome is a piece of art,\n");
+    return (0);
 }
