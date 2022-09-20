@@ -4,13 +4,12 @@
  * swap_int - swaps two integer values
  * @a: first integer
  * @b: second integer
- * Returns: nothin
+ * Returns: nothing
  */
 
 void swap_int(int *a, int *b);
 {
 int c;
-c = *a;
 *a = *b;
 *b = c;
 }
