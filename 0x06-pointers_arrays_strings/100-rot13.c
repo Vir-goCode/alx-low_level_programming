@@ -8,22 +8,15 @@ nclude "main.h
 
 char *rot13(char *s)
 {
-int i, j;
+char c[] = {"NOPQRSTUVWXYZABCDEFGHIJKLM[\\]^_`nopqrstuvwxyzabcdefghijklm"};
 
-char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+int i;
 
-for (i = 0; s[i] != '\0'; i++)
+for (i = 0; src[i] != '\0'; i++)
 {
-for (j = 0; a[j] != '\0'; j++)
-{
-if (s[i] == a[j])
-{
-s[i] = b[j];
-break;
-}
-}
+if (src[i] >= 'A' && src[i] <= 'z')
+src[i] = c[src[i] - 'A'];
 }
 
-return (s);
+return (src);
 }
