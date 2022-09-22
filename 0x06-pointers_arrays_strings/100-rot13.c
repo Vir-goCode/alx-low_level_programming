@@ -1,4 +1,4 @@
-nclude "main.h
+#include "main.h"
 
 /**
  * rot13 - encodes a string in rot13
@@ -8,6 +8,7 @@ nclude "main.h
 
 char *rot13(char *s)
 {
+
 char c[] = {"NOPQRSTUVWXYZABCDEFGHIJKLM[\\]^_`nopqrstuvwxyzabcdefghijklm"};
 
 int i;
