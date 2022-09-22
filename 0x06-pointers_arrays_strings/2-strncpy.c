@@ -1,22 +1,30 @@
 #include "main.h"
 
 /**
- * _strcmp - compares two strings
- * @s1: first string to compare
- * Return: less than 0 if s1 is less than s2, 0 if they're equal,
- * more than 0 if s1 is greater than s2
+ * _strncpy - copies a string
+ * @src: second string to copy from
+ * @dest: string to be overwritten
+ * @n: number of values to copy
+ * Return: pointer to dest
  */
 
-int _strcmp(char *s1, char *s2)
+char *_strncpy(char *dest, char *src, int n)
 {
-while (*s1 == *s2)
+int i;
+
+i = 0;
+
+while (src[i] != '\0' && i < n)
 {
-if (*s1 == '\0')
-{
-return (0);
+dest[i] = src[i];
+i++;
 }
-s1++;
-s2++;
+
+while (i < n)
+{
+dest[i] = '\0';
+i++;
 }
-return (*s1 - *s2);
+
+return (dest);
 }
