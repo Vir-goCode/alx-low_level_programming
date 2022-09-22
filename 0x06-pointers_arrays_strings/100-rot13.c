@@ -8,16 +8,20 @@
 
 char *rot13(char *s)
 {
+int i, j;
+char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-char c[] = {"NOPQRSTUVWXYZABCDEFGHIJKLM[\\]^_`nopqrstuvwxyzabcdefghijklm"};
-
-int i;
-
-for (i = 0; src[i] != '\0'; i++)
+for (i = 0; s[i] != '\0'; i++)
 {
-if (src[i] >= 'A' && src[i] <= 'z')
-src[i] = c[src[i] - 'A'];
+for (j = 0; a[j] != '\0'; j++)
+{
+if (s[i] == a[j])
+{
+s[i] = b[j];
+break;
 }
-
-return (src);
+}
+}
+return (s);
 }
