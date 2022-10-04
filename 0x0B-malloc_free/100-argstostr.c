@@ -32,6 +32,7 @@ k = 0;
 for (r = 0; r < ac; r++)
 {
 for (r = 0; av[r][d] != '\0'; d++)
+{
 str[k] = av[r][d];
 k++;
 }
