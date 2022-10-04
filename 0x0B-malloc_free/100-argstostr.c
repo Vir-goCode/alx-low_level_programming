@@ -22,7 +22,7 @@ for (d = 0; av[r][d] != '\0'; d++)
 len++;
 len++;
 }
-str = malloc(sizeof(char) * (len + 1));
+str = malloc(sizeof(char) * (len + 2));
 
 if (str == NULL)
 return (NULL);
