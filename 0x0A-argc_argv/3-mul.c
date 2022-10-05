@@ -18,9 +18,9 @@ printf("Error\n");
 
 else
 {
-num1 = _atoi(argv[1]);
-num2 = _atoi(argv[2]);
-mul = num1 * num2;
+num_1 = _atoi(argv[1]);
+num_2 = _atoi(argv[2]);
+mul = num_1 * num_2;
 printf("%d\n", mul);
 }
 return (0);
