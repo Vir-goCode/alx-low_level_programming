@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "dog.h"
 
 /**
@@ -9,13 +10,12 @@
  * @owner: owner to initialize
  */
 
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void print_dog(struct dog *d)
 {
 if (d == NULL)
-d = malloc(sizeof(struct dog));
+return;
 
-d->name = name;
-d->age = age;
-d->owner = owner;
+printf("Name: %s\n", (d->name == NULL) ? "(nil)" : d->name);
+printf("Age: %f\n", d->age);
+printf("Owner: %s\n", (d->owner == NULL) ? "(nil)" : d->owner);
 }
-
