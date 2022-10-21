@@ -1,4 +1,4 @@
-nclude <stdlib.h>
+#include <stdlib.h>
 #include <string.h>
 #include "lists.h"
 
@@ -17,8 +17,6 @@ unsigned int len = 0;
 
 while (str[len])
 len++;
-
-new = malloc(sizeof(list_t));
 if (!new)
 return (NULL);
 
