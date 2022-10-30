@@ -1,20 +1,17 @@
-#include "main.h" 
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
- * get_bit - return value of bit a given index;
- * @n: source decimal
- * @index: index of binary value
- * Return: value at given index, -1 if fails
+ * get_bit - returns the value of a bit at a given index.
+ * @n: number.
+ * @index: index.
+ * Return: the value of the bit at index index or -1 if an error occured.
  */
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-if (index > sizeof(unsigned long int) * 8)
+if (index > (sizeof(n) * 8))
 return (-1);
 
 n = n >> index;
-n = n & 1;
-return (n);
+return (n & 1);
 }
